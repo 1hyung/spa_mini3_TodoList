@@ -2,6 +2,7 @@ package com.teamsparta.todoregistration.domain.todo.controller
 
 import com.teamsparta.spa_mini3_todolist.domain.todo.dto.CreateTodoRequest
 import com.teamsparta.spa_mini3_todolist.domain.todo.dto.TodoResponse
+import com.teamsparta.spa_mini3_todolist.domain.todo.dto.UpdateTodoRequest
 import com.teamsparta.todoregistration.domain.exception.ModelNotFoundException
 import com.teamsparta.todoregistration.domain.exception.dto.ErrorResponse
 import com.teamsparta.todoregistration.domain.todo.service.TodoService
@@ -9,10 +10,9 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
-
 @RequestMapping("/todos")
 @RestController
-class TodoController<UpdateTodoRequest>(
+class TodoController(
     private val todoService: TodoService
 ) {
 
@@ -49,4 +49,3 @@ class TodoController<UpdateTodoRequest>(
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ErrorResponse(e.message))
     }
 }
-
