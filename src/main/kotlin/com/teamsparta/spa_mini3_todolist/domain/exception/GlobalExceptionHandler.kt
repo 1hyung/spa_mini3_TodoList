@@ -1,6 +1,6 @@
 package com.teamsparta.todoregistration.domain.exception
 
-import com.teamsparta.courseregistration.domain.exception.dto.ErrorResponse
+import com.teamsparta.todoregistration.domain.exception.dto.ErrorResponse
 import jakarta.persistence.EntityNotFoundException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
